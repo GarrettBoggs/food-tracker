@@ -11,10 +11,14 @@ html{
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 75px;
   color: white;
   text-align: center;
   text-shadow: 3px 3px black;
+  background: url('https://images3.alphacoders.com/112/112487.jpg');
+  border-radius: 50px;
+  height: 100px;
+  padding-top: 12px;
 }
 
 h2 {
@@ -28,6 +32,7 @@ input{
 
 button{
   box-shadow: 5px 5px 2px green;
+  border-radius: 25px;
 }
 
 .filter {
