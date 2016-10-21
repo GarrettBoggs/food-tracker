@@ -11,7 +11,7 @@ import { Food } from "./food.model";
       <label>Description</label>
       <input #foodDescription>
       <label>Calories</label>
-      <input #foodCalories>
+      <input type= "number" #foodCalories>
       <button (click)="createButtonClicked(foodName.value, foodDescription.value, foodCalories.value); foodName.value=''; foodDescription.value=''; foodCalories.value=''; "> Create Food </button>
     </div>
 
