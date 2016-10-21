@@ -17,7 +17,8 @@ import { Food } from './food.model';
 export class AppComponent {
   public masterFoodList: Food[] = [
     new Food("Hot Dog", "Pretty average", 150),
-    new Food("Hamburger", "Too much pickles", 324)
+    new Food("Hamburger", "Too much pickles", 324),
+    new Food("Steak Dinner", "Steak, eggs, hasbrowns, and a Red Bull", 1012)
   ]
 
   selectedFood: Food = null;

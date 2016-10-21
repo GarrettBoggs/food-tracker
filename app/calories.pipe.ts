@@ -12,7 +12,7 @@ import {Food} from './food.model';
     if(desiredCalories === "high"){
       for( var i = 0; i < input.length; i++){
         if( input[i].calories > 500 ){
-          output.push[i];
+          output.push(input[i]);
         }
       }
       return output;

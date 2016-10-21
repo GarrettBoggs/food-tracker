@@ -4,12 +4,17 @@ import { Food } from './food.model'
 @Component({
   selector: 'food-list',
   template: `
-  <div *ngFor="let currentFood of childFoodList | completeness:selectedCompleteness">
-    <p> {{currentFood.name}} </p>
-    <p> {{currentFood.description}} </p>
-    <p> {{currentFood.calories}} </p>
-    <button (click)="editButtonClicked(currentFood)">Edit</button>
-  </div>
+    <select (change)="onChange($event.target.value)" class="filter">
+      <option value="all">Show all</option>
+      <option value="high">High Calorie foods</option>
+      <option value="low">Low Calorie foods</option>
+    </select>
+    <div *ngFor="let currentFood of childFoodList | caloriesRank:selectedCalories">
+      <p> {{currentFood.name}} </p>
+      <p> {{currentFood.description}} </p>
+      <p> {{currentFood.calories}} </p>
+      <button (click)="editButtonClicked(currentFood)">Edit</button>
+    </div>
   `
 })
 
@@ -20,4 +25,11 @@ export class FoodListComponent {
   editButtonClicked(currentFood: Food){
     this.clickSender.emit(currentFood);
   }
+
+  public selectedCalories: string = "all";
+  
+  onChange(optionFromMenu){
+    this.selectedCalories = optionFromMenu;
+  }
+
 }
