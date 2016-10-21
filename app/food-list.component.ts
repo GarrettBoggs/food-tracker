@@ -15,6 +15,8 @@ import { Food } from './food.model'
       <p> {{currentFood.calories}} </p>
       <button (click)="editButtonClicked(currentFood)">Edit</button>
       <button (click)="deleteButtonClicked(currentFood)">Delete</button>
+
+        <edit-food *ngIf="selectedFood == currentFood" [childSelectedFood]="currentFood" (doneClickedSender)="finishedEditing()"></edit-food>
     </div>
   `
 })
@@ -26,6 +28,7 @@ export class FoodListComponent {
 
   editButtonClicked(currentFood: Food){
     this.clickSender.emit(currentFood);
+    this.selectedFood = currentFood;
   }
 
   deleteButtonClicked(currentFood: Food){
@@ -36,6 +39,12 @@ export class FoodListComponent {
 
   onChange(optionFromMenu){
     this.selectedCalories = optionFromMenu;
+  }
+
+  public selectedFood: Food = null;
+
+  finishedEditing(){
+    this.selectedFood = null;
   }
 
 }

@@ -9,7 +9,6 @@ import { Food } from './food.model';
     <food-list [childFoodList]="masterFoodList" (clickSender)='showDetails($event)' (deleteClickSender)='deleteFood($event)'> </food-list>
     <h2> Total Calories: {{ calTotal }} </h2>
     <button (click)="calculateTotalCal()"> Calculate Total Calories </button>
-    <edit-food [childSelectedFood]="selectedFood" (doneClickedSender)="finishedEditing()"></edit-food>
     <new-food (newFoodSender)="createFood($event)"></new-food>
   </div>
 
@@ -42,9 +41,6 @@ export class AppComponent {
 
   createFood(newFoodFromChild: Food){
     this.masterFoodList.push(newFoodFromChild);
-  }
-  finishedEditing(){
-    this.selectedFood = null;
   }
 
   deleteFood(clickedFood: Food){
