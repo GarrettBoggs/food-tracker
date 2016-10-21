@@ -11,12 +11,25 @@ html{
 }
 
 h1 {
-  color: gray;
+  color: darkgray;
   text-align: center;
   text-shadow: 3px 3px black;
+}
+
+h2 {
+  color: white;
+  text-shadow: 3px 3px black;
+}
+
+input{
+  margin-top: 20px;
 }
 
 .filter {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.NewFoodBar{
+  margin-right: 60%;
 }
