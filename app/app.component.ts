@@ -6,7 +6,7 @@ import { Food } from './food.model';
   template: `
   <div class="container">
     <h1>Food Tracker</h1>
-    <food-list [childFoodList]="masterFoodList" (clickSender)='showDetails($event)'> </food-list>
+    <food-list [childFoodList]="masterFoodList" (clickSender)='showDetails($event)' (deleteClickSender)='deleteFood($event)'> </food-list>
     <h2> Total Calories: {{ calTotal }} </h2>
     <button (click)="calculateTotalCal()"> Calculate Total Calories </button>
     <edit-food [childSelectedFood]="selectedFood" (doneClickedSender)="finishedEditing()"></edit-food>
@@ -45,6 +45,10 @@ export class AppComponent {
   }
   finishedEditing(){
     this.selectedFood = null;
+  }
+
+  deleteFood(clickedFood: Food){
+    this.masterFoodList.splice(this.masterFoodList.indexOf(clickedFood),1);
   }
 
 }

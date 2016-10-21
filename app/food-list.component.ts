@@ -14,6 +14,7 @@ import { Food } from './food.model'
       <p> {{currentFood.description}} </p>
       <p> {{currentFood.calories}} </p>
       <button (click)="editButtonClicked(currentFood)">Edit</button>
+      <button (click)="deleteButtonClicked(currentFood)">Delete</button>
     </div>
   `
 })
@@ -21,13 +22,18 @@ import { Food } from './food.model'
 export class FoodListComponent {
   @Input() childFoodList: Food[];
   @Output() clickSender = new EventEmitter();
+  @Output() deleteClickSender = new EventEmitter();
 
   editButtonClicked(currentFood: Food){
     this.clickSender.emit(currentFood);
   }
 
+  deleteButtonClicked(currentFood: Food){
+    this.deleteClickSender.emit(currentFood);
+  }
+
   public selectedCalories: string = "all";
-  
+
   onChange(optionFromMenu){
     this.selectedCalories = optionFromMenu;
   }

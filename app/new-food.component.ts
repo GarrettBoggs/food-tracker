@@ -11,7 +11,7 @@ import { Food } from "./food.model";
       <label>Description</label>
       <input #foodDescription>
       <label>Calories</label>
-      <input type= "number" #foodCalories>
+      <input #foodCalories>
       <button (click)="createButtonClicked(foodName.value, foodDescription.value, foodCalories.value); foodName.value=''; foodDescription.value=''; foodCalories.value=''; "> Create Food </button>
     </div>
 
@@ -21,8 +21,9 @@ import { Food } from "./food.model";
 export class NewFoodComponent {
   @Output() newFoodSender = new EventEmitter()
 
-  createButtonClicked(name: string, des: string, calories: number ){
-    var newFood = new Food( name, des, calories);
+  createButtonClicked(name: string, des: string, calories: string ){
+    var caloriesInteger = parseInt(calories);
+    var newFood = new Food( name, des, caloriesInteger);
     this.newFoodSender.emit(newFood);
   }
 }
