@@ -18,4 +18,8 @@ export class AppComponent {
     new Food("Hot Dog", "Pretty average", 150),
     new Food("Hamburger", "Too much pickles", 324)
   ]
+
+  createFood(newFoodFromChild: Food){
+    this.masterFoodList.push(newFoodFromChild);
+  }
 }
