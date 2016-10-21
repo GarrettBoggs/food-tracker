@@ -1,6 +1,6 @@
 # _Food Tracker_
 
-#### _Log food eaton on that day, October 21st_
+#### _Log food eaten on that day, October 21st_
 
 #### By _**Garrett Boggs**_
 
@@ -27,24 +27,24 @@ _Bower, NPM, Angular Javascript2, TypeScript_
 ### Specs
 
 User should be able to input food with name, description, and calories
-Input Example: User enters a hotdog, with description: Yummy and 160 calories.
-Output Example: Program displays food name, description, and calories.
+* Input Example: User enters a hotdog, with description: Yummy and 160 calories.
+* Output Example: Program displays food name, description, and calories.
 
 User can update food name, description, or calories.
-Input Example: User changes Hot Dog to 150 calories.
-Output Example: Computer now displays 150 instead of 160 calories.
+* Input Example: User changes Hot Dog to 150 calories.
+* Output Example: Computer now displays 150 instead of 160 calories.
 
 User can look at all the foods with calories over 500.
-Input Example: User selects to see only high calorie foods.
-Output Example: The Hot Dog is no longer shown.
+* Input Example: User selects to see only high calorie foods.
+* Output Example: The Hot Dog is no longer shown.
 
 User can look at all the foods with calories under 500.
-Input Example: User selects to see only low calorie foods.
-Output Example: The Hot Dog is now shown.
+* Input Example: User selects to see only low calorie foods.
+* Output Example: The Hot Dog is now shown.
 
 Program can calculate total Calories:
-Input Example: User adds a 250 calorie Watermelon and calculates total calories.
-Output Example: The user is shown a total calories of 400.
+* Input Example: User adds a 250 calorie Watermelon and calculates total calories.
+* Output Example: The user is shown a total calories of 400.
 
 ### License
 
