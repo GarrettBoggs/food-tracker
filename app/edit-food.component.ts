@@ -13,7 +13,6 @@ import { Food } from './food.model';
      <div>
        <label>Description:</label>
        <input [(ngModel)]="childSelectedFood.description">
-       <button (click)="doneClicked()">Done</button>
      </div>
      <div>
        <label>Description:</label>
