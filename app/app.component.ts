@@ -11,7 +11,6 @@ import { Food } from './food.model';
     <button (click)="calculateTotalCal()"> Calculate Total Calories </button>
     <new-food (newFoodSender)="createFood($event)"></new-food>
   </div>
-
   `
 })
 
@@ -21,7 +20,7 @@ export class AppComponent {
 
   public masterFoodList: Food[] = [
     new Food("Hot Dog", "Pretty average", 150),
-    new Food("Hamburger", "Too much pickles", 324),
+    new Food("Hamburger", "Too many pickles", 324),
     new Food("Steak Dinner", "Steak, eggs, hasbrowns, and a Red Bull", 1012)
   ]
 

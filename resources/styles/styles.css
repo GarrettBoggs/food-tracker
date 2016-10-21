@@ -7,11 +7,12 @@ body{
 }
 
 html{
-  background: lightblue;
+  background: darkgreen;
 }
 
 h1 {
-  color: darkgray;
+  font-size: 50px;
+  color: white;
   text-align: center;
   text-shadow: 3px 3px black;
 }
@@ -23,6 +24,10 @@ h2 {
 
 input{
   margin-top: 20px;
+}
+
+button{
+  box-shadow: 5px 5px 2px green;
 }
 
 .filter {
